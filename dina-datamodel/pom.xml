@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>se.nrm.dina</groupId>
+        <artifactId>dina-data-services</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+   
+    <artifactId>dina-datamodel</artifactId>
+    <packaging>jar</packaging>
+    
+    <name>${project.artifactId}</name>
+    
+    <dependencies>
+        
+<!--         <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.2.11</version>
+        </dependency>-->
+        
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <!--<version>2.6.0-SNAPSHOT</version>-->
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>2.1.0</version>
+        </dependency> 
+        
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.jpa.modelgen</artifactId> 
+            <version>2.6.0-SNAPSHOT</version>
+        </dependency>
+         
+        
+        
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+            <!--<version>2.6.0-SNAPSHOT</version>--> 
+            <version>2.7.0-SNAPSHOT</version> 
+        </dependency>
+        
+        
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.2.Final</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.11.Final</version>
+            <type>jar</type>
+        </dependency>
+        
+<!--        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.10</version>
+        </dependency>-->
+         
+
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+<!--            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                     for fix multiple persistant-unit 
+                    <compilerArguments>
+                        <endorseddirs>${endorsed.dir}</endorseddirs>
+                        <proc:none/>
+                        <Xlint/>
+                        <Xlint:-path/>
+                        <verbose />
+                    </compilerArguments>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>-->
+        </plugins>
+    </build>
+<!--    <repositories>
+        <repository>
+            <url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
+            <id>eclipselink</id>
+            <layout>default</layout>
+            <name>Repository for library Library[eclipselink]</name>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <layout>default</layout>
+            <url>http://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository> 
+        
+        <repository>
+            <id>sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories> -->
+</project>
